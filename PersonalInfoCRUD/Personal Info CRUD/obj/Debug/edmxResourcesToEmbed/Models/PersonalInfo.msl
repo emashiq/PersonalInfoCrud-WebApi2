@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PersonalInfoModelStoreContainer" CdmEntityContainer="PersonalInfoEntities">
+    <EntitySetMapping Name="Infoes">
+      <EntityTypeMapping TypeName="PersonalInfoModel.Info">
+        <MappingFragment StoreEntitySet="Info">
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DataInsertTime" ColumnName="DataInsertTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_AddPersonalInfo" FunctionName="PersonalInfoModel.Store.SP_AddPersonalInfo" />
+    <FunctionImportMapping FunctionImportName="SP_DeletePersonalInfo" FunctionName="PersonalInfoModel.Store.SP_DeletePersonalInfo" />
+    <FunctionImportMapping FunctionImportName="SP_SeletePersonalInfo" FunctionName="PersonalInfoModel.Store.SP_SeletePersonalInfo" />
+    <FunctionImportMapping FunctionImportName="SP_UpdatePersonalInfo" FunctionName="PersonalInfoModel.Store.SP_UpdatePersonalInfo" />
+  </EntityContainerMapping>
+</Mapping>

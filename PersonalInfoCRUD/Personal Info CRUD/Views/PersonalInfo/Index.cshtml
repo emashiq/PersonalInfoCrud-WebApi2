@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Personal Information</h2>
+@Html.ActionLink("Create","Create")
+<table class="table">
+   <thead>
+       <tr>
+           <th>SL</th>
+           <th>Name</th>
+           <th>Age</th>
+           <th>Date Of Birth</th>
+           <th>Address</th>
+           <th>Status</th>
+           <th>Data Insert Time</th>
+           <th>Operations</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in ViewBag.result)
+        {
+            <tr>
+                <td>@item.SL</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+                <td>@item.DOB.ToString("MMMM dd, yyyy")</td>
+                <td>@item.Address</td>
+                <td>@item.Status</td>
+                <td>@item.DataInsertTime</td>
+                <td> @Html.ActionLink("Delete","Delete",new {SL=@item.SL})|@Html.ActionLink("Edit", "Edit", new { SL = @item.SL })</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
